@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Roboto+Slab:wght@300&family=Ubuntu:wght@300;400&family=Varela+Round&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 25px;
+    font-family: 'PT Serif', serif;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.gameContainer{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 23px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3 , 10vw);
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(237, 221, 252);
+}
+
+.gameinfo{
+    padding: 0 30px;
+    font-family: 'Lobster', cursive;
+}
+
+.gameinfo h1{
+    font-size: 2.3rem;
+}
+
+.info{
+    font-size: 25px;
+}
+
+.imagebox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br{
+    border-right: 0;
+}
+
+.bl{
+    border-left: 0;
+}
+
+.bt{
+    border-top: 0;
+}
+
+.bb{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 0 33px;
+    padding: 4px 24px;
+    border-radius: 8px;
+    background: #e0e0f2;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.line{
+    background-color: rgb(170, 17, 17);
+    width: 0vw;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width:900px){
+
+    .gameContainer{
+         flex-wrap: wrap ;
+    }
+
+    .gameinfo{
+        margin-top: 35px;
+    }
+
+    .gameinfo h1{
+        font-size: 2.3rem;
+    }
+
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3 , 20vw);
+    }
+
+    .info{
+        font-size: 2.5rem;
+    }
+
+    
+
+    #reset{
+    margin: 20px 23px;
+    padding: 7px 42px;
+    border-radius: 8px;
+    background: #e0e0f2;
+    font-size: 40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+
+    
+    
+}
